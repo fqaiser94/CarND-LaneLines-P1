@@ -33,15 +33,15 @@ My pipeline consisted of the following steps:
 - Find lines of best fit for both left and right lanes
 - Overlay lines over original image
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function so that it took the following additional steps: 
+- Collect all the end points of all detected 
+- Seperate points into left and right by comparing their x-coordinate to the mid-point of the image
+- Find the best (straight) line of fit for the left and right points seperately  
 
 ### 2. Identify potential shortcomings with your current pipeline
 
 
 One potential shortcoming would be what would happen when the image's centre is not aligned with the middle of the lane, which is something my function assumes.   
-
-Another shortcoming could be ...
 
 
 ### 3. Suggest possible improvements to your pipeline
